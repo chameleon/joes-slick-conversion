@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+   	   <meta charset="UTF-8"> 
+      <title>Conversion</title>
+      <link rel="stylesheet" href="css/style.css" type="text/css">
+      <link rel="stylesheet" href="css/font-awesome-all.min.css" type="text/css">
+
+      <!-- <script src="js/script.js"></script> -->
+   </head>
+   <body>
+      <div class="page-container">
+         <header>
+            <img class="logo" src="images/logo.png" alt="logo image">
+            <nav class="header-nav">
+               <ul>
+                  <li><a href="#">Books</a></li>
+                  <li><a href="#">Audio Books</a></li>
+                  <li><a href="#">Textbooks</a></li>
+                  <li><a href="#">Magazines</a></li>
+               </ul>
+            </nav>
+            <div class="header-user-menu">
+               <img class="user-photo" src="images/user-photo.png" alt="user photo">
+               <div class="user-name">
+                  bookworm32
+               </div>
+               <span class="user-menu-icon">
+               <a href="#">
+               <i class="fas fa-chevron-down fa-sm"></i>
+               </a>
+               </span>
+            </div>
+         </header>
+         <div class="middle">
+            <div class="sidebar-container">
+               <div class="sidebar">
+                  <div class="sidebar-header">
+                     Filters
+                  </div>
+                  <fieldset id="fieldset" class="sidebar-genres">
+                     <h4>Filter by genre</h4>
+                     <label>
+                     	<input class="c-g-bil" type="checkbox">Bildungroman
+                     </label>
+                     <label>
+                     	<input class="c-g-cla" type="checkbox">Classic
+                     </label>
+                     <label>
+                     	<input class="c-g-cri" type="checkbox">Crime & Thriller
+                     </label>
+                     <label>
+                     	<input class="c-g-fan" type="checkbox">Fantasy
+                     </label>
+                     <label>
+                     	<input class="c-g-hfi" type="checkbox">Historical Fiction
+                     </label>
+                     <label>
+                     	<input class="c-g-hor" type="checkbox">Horror
+                     </label>
+                     <label>
+                     	<input class="c-g-rom" type="checkbox">Romance
+                     </label>
+                     <label>
+                     	<input class="c-g-sfi" type="checkbox">Science Fiction
+                     </label>
+                     <label>
+                     	<input class="c-g-wes" type="checkbox">Western
+                     </label>
+                     <label>
+                     	<input class="c-g-you" type="checkbox">Young Adult
+                     </label>
+                     <label>
+                     	<input class="c-g-fav" type="checkbox" id="c-g-fav">My Favorites
+                     </label>
+                  </fieldset>
+               </div>
+            </div>
+            <main >
+               <h1>My Saved Books</h1>
+               <div id="msg"></div>
+               <div id="books-grid" class="books-grid">
+                  <div class="book g-cri showing g-not-fav">
+                     <div class="book-content">
+                        <img class="book-img" src="images/book-1.jpg" alt="book cover of The Black Echo">
+                        <h3 class="book-title">The Black Echo</h3>
+                        <div class="book-author"><span class="book-by">by </span><a href="#">Michael Connelly</a></div>
+                        <div class="book-genre">Crime</div>
+                     </div>
+                     <div class="book-footer">
+                        <div class="book-footer-left not-favorite">
+                           <span class="book-icon">	
+                           <i class="fas fa-heart fa-sm"></i>
+                           </span>
+                        </div>
+                        <div class="book-footer-right">
+                           <span class="book-icon">
+                           <i class="far fa-trash-alt fa-sm"></i></span><span class="book-remove">Remove</span>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="book g-hor showing g-not-fav">
+                     <div class="book-content">
+                        <img class="book-img" src="images/book-2.jpg" alt="book cover of Cry Down Darkly">
+                        <h3 class="book-title">Cry Down Darkly</h3>
+                        <div class="book-author"><span class="book-by">by </span><a href="#">T.J. Tranchell</a></div>
+                        <div class="book-genre">Horror</div>
+                     </div>
+                     <div class="book-footer">
+                        <div class="book-footer-left not-favorite">
+                           <span class="book-icon">	
+                           <i class="fas fa-heart fa-sm"></i>
+                           </span>
+                        </div>
+                        <div class="book-footer-right">
+                           <span class="book-icon">
+                           <i class="far fa-trash-alt fa-sm"></i></span><span class="book-remove">Remove</span>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="book g-fan showing g-not-fav">
+                     <div class="book-content">
+                        <img class="book-img" src="images/book-5.jpg"  alt="book cover of Fantastic Beasts and Where to Find Them: The Original Screenplay">
+                        <h3 class="book-title">Fantastic Beasts and Where to Find Them: The Original Screenplay</h3>
+                        <div class="book-author"><span class="book-by">by </span><a href="#">J.K. Rowling</a></div>
+                        <div class="book-genre">Fantasy</div>
+                     </div>
+                     <div class="book-footer">
+                        <div class="book-footer-left not-favorite">
+                           <span class="book-icon">	
+                           <i class="fas fa-heart fa-sm"></i>
+                           </span>
+                        </div>
+                        <div class="book-footer-right">
+                           <span class="book-icon">
+                           <i class="far fa-trash-alt fa-sm"></i></span><span class="book-remove">Remove</span>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="book g-fan showing g-not-fav">
+                     <div class="book-content">
+                        <img class="book-img" src="images/book-6.jpg" alt="The Fellowship of the Ring">
+                        <h3 class="book-title">The Fellowship of the Ring</h3>
+                        <div class="book-author"><span class="book-by">by </span><a href="#">J.J.R. Tolkien</a></div>
+                        <div class="book-genre">Fantasy</div>
+                     </div>
+                     <div class="book-footer">
+                        <div class="book-footer-left not-favorite">
+                           <span class="book-icon">	
+                           <i class="fas fa-heart fa-sm"></i>
+                           </span>
+                        </div>
+                        <div class="book-footer-right">
+                           <span class="book-icon">
+                           <i class="far fa-trash-alt fa-sm"></i></span><span class="book-remove">Remove</span>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="book g-cla showing g-not-fav">
+                     <div class="book-content">
+                        <img class="book-img" src="images/book-8.jpg" alt="Great Expectations">
+                        <h3 class="book-title">Great Expectations</h3>
+                        <div class="book-author"><span class="book-by">by </span><a href="#">Charles Dickens</a></div>
+                        <div class="book-genre">Classic</div>
+                     </div>
+                     <div class="book-footer">
+                        <div class="book-footer-left not-favorite">
+                           <span class="book-icon">	
+                           <i class="fas fa-heart fa-sm"></i>
+                           </span>
+                        </div>
+                        <div class="book-footer-right">
+                           <span class="book-icon">
+                           <i class="far fa-trash-alt fa-sm"></i></span><span class="book-remove">Remove</span>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="book g-sfi showing g-not-fav">
+                     <div class="book-content">
+                        <img class="book-img" src="images/book-9.jpg" alt="Jurrasic Park">
+                        <h3 class="book-title">Jurrasic Park</h3>
+                        <div class="book-author"><span class="book-by">by </span><a href="#">Michael Crichton</a></div>
+                        <div class="book-genre">Science Fiction</div>
+                     </div>
+                     <div class="book-footer">
+                        <div class="book-footer-left not-favorite">
+                           <span class="book-icon">	
+                           <i class="fas fa-heart fa-sm"></i>
+                           </span>
+                        </div>
+                        <div class="book-footer-right">
+                           <span class="book-icon">
+                           <i class="far fa-trash-alt fa-sm"></i></span><span class="book-remove">Remove</span>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="book g-hfi showing g-not-fav">
+                     <div class="book-content">
+                        <img class="book-img" src="images/book-10.jpg" alt="book cover of Timeline">
+                        <h3 class="book-title">Timeline</h3>
+                        <div class="book-author"><span class="book-by">by </span><a href="#">Michael Crichton</a></div>
+                        <div class="book-genre">Historical Fiction, Science Fiction</div>
+                     </div>
+                     <div class="book-footer">
+                        <div class="book-footer-left not-favorite">
+                           <span class="book-icon">	
+                           <i class="fas fa-heart fa-sm"></i>
+                           </span>
+                        </div>
+                        <div class="book-footer-right">
+                           <span class="book-icon">
+                           <i class="far fa-trash-alt fa-sm"></i></span><span class="book-remove">Remove</span>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="book g-wes showing g-not-fav">
+                     <div class="book-content">
+                        <img class="book-img" src="images/book-12.jpg" alt="The Walking Drum: A Novel">
+                        <h3 class="book-title">The Walking Drum: A Novel</h3>
+                        <div class="book-author"><span class="book-by">by </span><a href="#">Louis L'Amour</a></div>
+                        <div class="book-genre">Western</div>
+                     </div>
+                     <div class="book-footer">
+                        <div class="book-footer-left not-favorite">
+                           <span class="book-icon">	
+                           <i class="fas fa-heart fa-sm"></i>
+                           </span>
+                        </div>
+                        <div class="book-footer-right">
+                           <span class="book-icon">
+                           <i class="far fa-trash-alt fa-sm"></i></span><span class="book-remove">Remove</span>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="book g-cla g-hfi g-rom showing g-not-fav">
+                     <div class="book-content">
+                        <img class="book-img" src="images/book-13.jpg" alt="War and Peace">
+                        <h3 class="book-title">War and Peace</h3>
+                        <div class="book-author"><span class="book-by">by </span><a href="#">Leo Tolstoy</a></div>
+                        <div class="book-genre">Classic, Historical Fiction, Romance</div>
+                     </div>
+                     <div class="book-footer">
+                        <div class="book-footer-left not-favorite">
+                           <span class="book-icon">	
+                           <i class="fas fa-heart fa-sm"></i>
+                           </span>
+                        </div>
+                        <div class="book-footer-right">
+                           <span class="book-icon">
+                           <i class="far fa-trash-alt fa-sm"></i></span><span class="book-remove">Remove</span>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="book g-you showing g-not-fav">
+                     <div class="book-content">
+                        <img class="book-img" src="images/book-14.jpg" alt="book cover of The White Mountains (The Tripos Trilogy, Book 1)">
+                        <h3 class="book-title">The White Mountains (The Tripos Trilogy, Book 1)</h3>
+                        <div class="book-author"><span class="book-by">by </span><a href="#">John Christopher</a></div>
+                        <div class="book-genre">Young Adult</div>
+                     </div>
+                     <div class="book-footer">
+                        <div class="book-footer-left not-favorite">
+                           <span class="book-icon">	
+                           <i class="fas fa-heart fa-sm"></i>
+                           </span>
+                        </div>
+                        <div class="book-footer-right">
+                           <span class="book-icon">
+                           <i class="far fa-trash-alt fa-sm"></i></span><span class="book-remove">Remove</span>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="book g-cla g-rom showing g-not-fav">
+                     <div class="book-content">
+                        <img class="book-img" src="images/book-16.jpg" alt="Book cover of Wuthering Heights">
+                        <h3 class="book-title">Wuthering Heights</h3>
+                        <div class="book-author"><span class="book-by">by </span><a href="#">Emily Bronte</a></div>
+                        <div class="book-genre">Classic, Romance</div>
+                     </div>
+                     <div class="book-footer">
+                        <div class="book-footer-left not-favorite">
+                           <span class="book-icon">	
+                           <i class="fas fa-heart fa-sm"></i>
+                           </span>
+                        </div>
+                        <div class="book-footer-right">
+                           <span class="book-icon">
+                           <i class="far fa-trash-alt fa-sm"></i></span><span class="book-remove">Remove</span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </main>
+         </div>
+         <footer>
+            <div class="footer-site">
+               <nav class="footer-store-links">
+                  <h4>Online Bookstore</h4>
+                  <ul>
+                     <li><a href="#">Fiction and Non-Fiction Books</a></li>
+                     <li><a href="#">Audiobooks</a></li>
+                     <li><a href="#">College Textbooks</a></li>
+                     <li><a href="#">Magazine Subscriptions</a></li>
+                  </ul>
+               </nav>
+               <nav class="footer-corp-links">
+                  <h4>About Us</h4>
+                  <ul>
+                     <li><a href="#">Careers</a></li>
+                  </ul>
+               </nav>
+               <div class="footer-about">
+                  <h4>About Online Bookstore</h4>
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages</p>
+               </div>
+            </div>
+            <div class="footer-legal">
+               <div class="footer-legal-left">
+                  &#169; Copyright 2016, The Online Book Company. All Rights Reserved.
+               </div>
+               <div class="footer-legal-right">
+                  <a href="#">Terms and Conditions</a> &#183; <a href="#">Privacy Policy</a> &#183; <a href="#">Acceptable Use Policy</a>
+               </div>
+            </div>
+         </footer>
+      </div>
+
+
+      <script>
+		 function countCheckedBoxes() {
+			var checkedBoxes = "input:checked";
+			var tally = document.getElementById("fieldset").querySelectorAll(checkedBoxes).length;
+			return tally;
+		}
+
+		function countFavs() {
+			var favCount = document.getElementById("books-grid").querySelectorAll('.g-fav').length;
+			return favCount;
+		}
+
+		function countBooksInGenre(className) {
+			var genreName = "." + className.substring(2);
+			var inGenreBookCount = document.getElementById("books-grid").querySelectorAll(genreName).length;
+			return inGenreBookCount;
+		}
+
+		function getSingleCheckedBoxName() {
+			var query = "input:checked";
+			var checkedBoxName = document.getElementById("fieldset").querySelectorAll(query);
+			var className = checkedBoxName[0].className;
+			return className;
+		}
+
+		function getAllCheckedBoxNames() {
+			var query = "input:checked";
+			var checkedBoxNames = document.getElementById("fieldset").querySelectorAll(query),
+				i;
+			return checkedBoxNames;
+		}
+
+
+		function hideAll() {
+			//Clear error message text
+			document.getElementById("msg").innerHTML = "";
+
+			var allBooks = document.querySelectorAll(".book");
+			[].forEach.call(allBooks, function (el) {
+				el.classList.remove("showing");
+				el.classList.add("hiding");
+			});
+		} //jQuery Equivilent:    $('.book').addClass('.hidden');
+
+
+		function showAll() {
+			var allBooks = document.querySelectorAll(".book");
+			[].forEach.call(allBooks, function (el) {
+				el.classList.remove("showing"); //clear existing shows
+				el.classList.remove("hiding");
+				el.classList.add("showing");
+			});
+		}
+
+		function toggleFavoriteStatus() {
+			var parentBook = event.target.closest(".book");
+			if (parentBook.classList.contains('g-not-fav')) {
+				parentBook.classList.remove("g-not-fav");
+				parentBook.classList.add("g-fav");
+			} else {
+				//un-fav:
+				parentBook.classList.remove("g-fav");
+				parentBook.classList.add("g-not-fav");
+				//If removing fav status, check if checked count is 1
+				var tally = countCheckedBoxes();
+				if (tally == 1) {
+					//There's one box checked but, is it favs?
+					var className = getSingleCheckedBoxName();
+					if (className == 'c-g-fav') {
+						// It IS favs!
+						//then hide the book you just un-faved.
+						parentBook.classList.remove("showing");
+						parentBook.classList.add("hiding");
+						//and check if there are any books left in favs
+						var favCount = countFavs();
+						//if zero, then show msg
+						if (favCount == 0) {
+							document.getElementById("msg").innerHTML = "You have no books marked as favorites.";
+						}
+					}
+				}
+			}
+		}
+
+		/* Remove book permanently from DOM. */
+		function removeBook() {
+			var parentBook = event.target.closest(".book");
+
+			if (confirm("Are you sure you want to remove this book?")) {
+				parentBook.remove(); //Remove from DOM
+				
+				//Check if you just removed the last book in a single genre view so you can show a message.
+				var tally = countCheckedBoxes();
+				if (tally == 1) {
+					//There's one box checked but, is it favs?
+					var className = getSingleCheckedBoxName();
+					//and check if there are any books left in className genre
+					var inGenreBookCount = countBooksInGenre(className);
+					//if zero, then show msg
+					if (inGenreBookCount == 0) {
+						document.getElementById("msg").innerHTML = "No results found.";
+					}
+				}
+			}
+		}
+
+
+		// Show the books in a single genre or fav list 
+		function showSingleCat() {
+			//get the class name of whatever single box is checked.
+			var className = getSingleCheckedBoxName();
+
+			//convert checkbox class name to book tile class name
+			var bookClassName = className.substring(2);
+			var x = document.getElementsByClassName(bookClassName);
+
+			if (x.length == 0) {
+				// Show message if no books found in the genre/favs list.
+				if (bookClassName != 'g-fav') {
+					msg = "No results found in this genre.";
+				} else {
+					msg = "You have no books marked as favorites.";
+				}
+				document.getElementById("msg").innerHTML = msg;
+			} else {
+				//Loop through books in that genre and show each.
+				var i;
+				for (i = 0; i < x.length; i++) {
+					x[i].classList.remove("showing");
+					x[i].classList.remove("hiding");
+					x[i].classList.add("showing");
+				}
+			}
+
+		}
+
+		/* 
+		If favorites is selected as well as 1 or more genres, only show the intersection / inner join.	   
+		*/
+		function showMultipleCats() {
+			// If fav is checked, only search faved items for matches.
+			var favsShowing = document.getElementById("c-g-fav").checked;
+
+			if (favsShowing == false) {
+				var checkedBoxNames = getAllCheckedBoxNames();
+
+				for (i = 0; i < checkedBoxNames.length; ++i) {
+					var genreName = checkedBoxNames[i].className.substring(2);
+
+					var x = document.getElementsByClassName(genreName);
+
+					var n;
+					for (n = 0; n < x.length; n++) {
+						x[n].classList.remove("showing");
+						x[n].classList.remove("hiding");
+						x[n].classList.add("showing");
+					}
+				}
+			} else {
+				// Favs IS checked
+
+				//gather all checked box classes including favs
+				var checkedBoxNames = getAllCheckedBoxNames();
+				var innerJoinCount = 0;
+
+				for (i = 0; i < checkedBoxNames.length; ++i) {
+					//go through each one, convert to book class,
+					var genreName = checkedBoxNames[i].className.substring(2);
+
+					//get all the books with this class name
+					var x = document.getElementsByClassName(genreName);
+
+					var n;
+					for (n = 0; n < x.length; n++) {
+						// Loop through this class's element's classList looking for fav class.
+						//If this book also contains g-fav class, then show the book. and increment count.
+						if (x[n].classList.contains('g-fav')) {
+							if (genreName != 'g-fav') { //omit favs
+								x[n].classList.remove("showing");
+								x[n].classList.remove("hiding");
+								x[n].classList.add("showing");
+							}
+						}
+					}
+
+				}
+			}
+
+		}
+
+		// CLICK HANDLERS
+		document.onclick = function () {
+			/*  Favoriting a Book  */
+			if (event.target.matches('.book-footer-left')) {
+				toggleFavoriteStatus();
+			};
+
+			/* Remove a book from view but not from DOM. */
+			if (event.target.matches('.book-footer-right')) {
+				removeBook();
+			};
+
+			
+			// FILTERS
+			// if clicked item was a filter checkbox
+			if (event.target.matches('.sidebar-genres input')) {
+
+				//First, hide all books, everytime.
+				hideAll();
+
+				//Count checked boxes to determine fastest code to use.
+				var numOfCheckedBoxes = countCheckedBoxes();
+				// Probably should only count genres that actually have books in them but...
+
+				switch (numOfCheckedBoxes) {
+					case 0:
+						showAll();
+						break;
+					case 1:
+						showSingleCat();
+						break;
+					default:
+						showMultipleCats();
+				}
+
+			};
+		};
+      </script>
+   </body>
+</html>
